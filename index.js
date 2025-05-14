@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Backend do Email Receiver funcionando!');
+});
+
 app.get('/codigo', async (req, res) => {
   const { email, senha } = req.query;
 
